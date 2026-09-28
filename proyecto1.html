@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>awsoluciones</title>
+</head>
+<body class="bg-success">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <img src="img/logo.png" class="img-fluid" alt="Logo DevQuest">
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <h1 class="text-light text-center">🚀¡Bienvenido a DevQuest!</h1>
+    <br>
+  
+    <div class="card bg-black border-info text-light mb-4">
+        <div class="card-body"> 
+            <h4 class="text-info text-center">
+                <p><strong><em>En este desafío te convertirás en el líder de desarrollo de software. Tu misión será planificar proyectos, administrar recursos, controlar el presupuesto y tomar decisiones estratégicas para lograr que cada proyecto llegue a buen puerto.<br><br>
+                Durante la partida deberás enfrentar imprevistos, gestionar el tiempo de desarrollo y utilizar el presupuesto de manera inteligente. Cada decisión tendrá consecuencias que influirán en el éxito o fracaso del proyecto.<br><br>
+                🎯 Completa el proyecto antes de que sea demasiado tarde.<br><br>
+                <strong>¿Tienes lo necesario para convertirte en el mejor gestor de proyectos de software?</strong></em></strong></p>
+            </h4>
+        </div>
+    </div>
+
+    <h3 class="text-light text-center">¡Comienza tu aventura en DevQuest! 🚀</h3>
+
+    <div class="text-center">
+        <button id="btnAvatares" class="btn btn-info text-black">
+            PERSONALIZA TU AVATAR
+        </button>
+    </div>
+
+    <div id="avatares" class="text-center mt-3" style="display:none;">
+        <img src="img/avatar1.png" width="50" class="img-avatar" data-avatar="avatar1.png">
+        <img src="img/avatar2.png" width="50" class="img-avatar" data-avatar="avatar2.png">
+        <img src="img/avatar3.png" width="50" class="img-avatar" data-avatar="avatar3.png">
+        <img src="img/avatar4.png" width="50" class="img-avatar" data-avatar="avatar4.png">
+    </div>
+
+    <div class="container text-light mt-3">
+        <h3>Avatar seleccionado:</h3>
+        <img id="avatarElegido" src="" width="75">
+        <br><br>
+        <label for="usuario"><strong>INGRESE SU APODO:</strong></label><br>
+        <input type="text" id="usuario" class="form-control" placeholder="Ej: Nombre usuario">
+        <br><br>
+   
+        <button id="btnComenzar" class="btn btn-info btn-lg w-100">
+            COMENZAR 
+        </button>
+    </div> 
+   <script src="../js/Rutas.js"></script>
+    <script src="../js/Avatar.js"></script>
+</body>
+</html>
