@@ -1,4 +1,4 @@
-function irAProyecto2 () {
+/*function irAProyecto2 () {
 window.location.href="/paginas/proyecto2.html";
 }
 function irAProyect3 () {
@@ -13,5 +13,8 @@ function irAProyect3 () {
  const btnEmpezarPartida=document.getElementById("btnEmpezarPartida");
  if(btnEmpezarPartida)  {
     btnEmpezarPartida.addEventListener("click",irAProyect3);
- }
+ }*/ // no funcionan la ruta
 
+ export function redireccion(ruta) {
+    window.location.href=ruta;      
+}
