@@ -86,7 +86,15 @@
                             <p class="mb-1">💰 Costo: <strong>$1.000</strong></p>
                             <p>⏱️ Tiempo: <strong>3 min</strong></p>
                         </div>
-                        <button class="btn btn-success w-100 mt-3" onclick="toggleEmpleado(this, 1000, 180)">➕ Seleccionar</button>
+                        <label class="form-label mt-3" for="cantidadJunior">Cantidad</label>
+                        <select id="cantidadJunior" class="form-select cantidad-empleado" data-costo="1000" data-segundos="180" aria-label="Cantidad de analistas junior">
+                            <option value="0" selected>Elegir cantidad</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -103,7 +111,15 @@
                             <p class="mb-1">💰 Costo: <strong>$800</strong></p>
                             <p>⏱️ Tiempo: <strong>2 min</strong></p>
                         </div>
-                        <button class="btn btn-success w-100 mt-3" onclick="toggleEmpleado(this, 800, 120)">➕ Seleccionar</button>
+                        <label class="form-label mt-3" for="cantidadSemiSenior">Cantidad</label>
+                        <select id="cantidadSemiSenior" class="form-select cantidad-empleado" data-costo="800" data-segundos="120" aria-label="Cantidad de analistas semi senior">
+                            <option value="0" selected>Elegir cantidad</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -120,7 +136,15 @@
                             <p class="mb-1">💰 Costo: <strong>$1.200</strong></p>
                             <p>⏱️ Tiempo: <strong>3 min</strong></p>
                         </div>
-                        <button class="btn btn-success w-100 mt-3" onclick="toggleEmpleado(this, 1200, 180)">➕ Seleccionar</button>
+                        <label class="form-label mt-3" for="cantidadSenior">Cantidad</label>
+                        <select id="cantidadSenior" class="form-select cantidad-empleado" data-costo="1200" data-segundos="180" aria-label="Cantidad de analistas senior">
+                            <option value="0" selected>Elegir cantidad</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -137,47 +161,36 @@
                             <p class="mb-1">💰 Costo: <strong>$700</strong></p>
                             <p>⏱️ Tiempo: <strong>2 min</strong></p>
                         </div>
-                        <button class="btn btn-success w-100 mt-3" onclick="toggleEmpleado(this, 700, 120)">➕ Seleccionar</button>
+                        <label class="form-label mt-3" for="cantidadProgramador">Cantidad</label>
+                        <select id="cantidadProgramador" class="form-select cantidad-empleado" data-costo="700" data-segundos="120" aria-label="Cantidad de programadores">
+                            <option value="0" selected>Elegir cantidad</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="card bg-black border-success text-light mt-5">
-            <div class="card-body">
-                <h3 class="text-success">📊 Equipo seleccionado</h3>
+        <div class="text-center mt-4 mb-5">
+            <button type="button" id="btnConfirmar" class="btn btn-success btn-lg w-100">
+                ✅ CONFIRMAR EQUIPO
+            </button>
 
-                <div class="row text-center mt-3">
-                    <div class="col-12 col-md-4">
-                        <h6 class="text-secondary">EMPLEADOS</h6>
-                        <h3 id="cantidad">0</h3>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <h6 class="text-secondary">PRESUPUESTO UTILIZADO</h6>
-                        <h3 id="gasto">$0</h3>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <h6 class="text-secondary">TIEMPO UTILIZADO</h6>
-                        <h3><span id="minutos">00:00</span> min</h3>
-                    </div>
+            <div id="mensaje" class="alert mt-4 d-none" role="status" aria-live="polite"></div>
+
+            <div id="siguiente" class="text-center mt-4 d-none">
+                <div class="alert alert-success">
+                    <h3>🎉 ¡Relevamiento completado!</h3>
+                    <p>El equipo fue seleccionado correctamente.</p>
+                    <p>Próxima etapa: <strong>Análisis del Sistema</strong></p>
                 </div>
-
-                <button type="button" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-4">
-                    ✅ CONFIRMAR EQUIPO
+                <button id="btnContinuar" class="btn btn-primary btn-lg">
+                    ➡️ CONTINUAR
                 </button>
-
-                <div id="mensaje" class="alert mt-4 d-none"></div>
-
-                <div id="siguiente" class="text-center mt-4 d-none">
-                    <div class="alert alert-success">
-                        <h3>🎉 ¡Relevamiento completado!</h3>
-                        <p>El equipo fue seleccionado correctamente.</p>
-                        <p>Próxima etapa: <strong>Análisis del Sistema</strong></p>
-                    </div>
-                    <button id="btnContinuar" class="btn btn-primary btn-lg">
-                        ➡️ CONTINUAR
-                    </button>
-                </div>
             </div>
         </div>
     </div>
@@ -185,7 +198,6 @@
     <!-- Scripts del proyecto -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/clock.js"></script>
-    <script src="../js/carta.js"></script>
+    <script src="../js/pagina 2.js"></script>
 </body>
 </html>
-
