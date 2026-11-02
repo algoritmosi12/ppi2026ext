@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <title>DEVQUEST - Etapa 2</title>
+</head>
+
+<body class="bg-success text-light">
+
+    <div class="container mt-3">
+
+        <!-- ENCABEZADO -->
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center fw-bold">DEVQUEST</h1>
+                <h6 class="text-info text-center">
+                    Proyecto de Gestión de Software
+                </h6>
+            </div>
+        </div>
+
+        <!-- TIEMPO RESTANTE -->
+        <div class="card bg-black border-warning text-light mt-4 mb-3">
+            <div class="card-body text-center">
+                <h5 class="text-warning">TIEMPO RESTANTE</h5>
+                <h1 id="tiempo" class="text-warning fw-bold">16:40</h1>
+            </div>
+        </div>
+
+        <!-- ESTADÍSTICAS -->
+        <div class="row">
+
+            <div class="col-6 col-lg-3 mb-3">
+                <div class="card bg-black border-info text-center h-100">
+                    <div class="card-body">
+                        <<h6 class="text-success">PRESUPUESTO</h6>
+                        <h4 id="presupuesto" class="text-info">$16.900</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mb-3">
+                <div class="card bg-black border-info text-center h-100">
+                    <div class="card-body">
+                        <h6 class="text-success">TIEMPO ETAPA</h6>
+                        <h4 class="text-info">02:15</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mb-3">
+                <div class="card bg-black border-info text-center h-100">
+                    <div class="card-body">
+                         <h6 class="text-success">ROL</h6>
+                        <h4 class="text-info">Project Manager</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-lg-3 mb-3">
+                <div class="card bg-black border-info text-center h-100">
+                    <div class="card-body">
+                        <h6 class="text-success">EQUIPO</h6>
+                        <p class="text-info mb-0">1 Senior - 2 Semi Sr</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- INFORMACIÓN DE LA ETAPA -->
+        <div class="card bg-black border-info text-light mb-3">
+            <div class="card-body">
+
+                <h3 class="text-success">
+                    Etapa 2 — Análisis del Sistema
+                </h3>
+
+                <p>
+                    Con la información del relevamiento, tu equipo debe
+                    convertir las necesidades del cliente en requerimientos.
+                </p>
+
+
+        <!-- REQUERIMIENTOS -->
+<h3 class="mb-3">¿Es necesario para el sistema?</h3>
+
+<div class="row" id="listaRequerimientos">
+
+    <!-- TARJETA 1 -->
+    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+        <div class="card bg-black border-info text-light h-100"
+             data-id="1">
+
+            <div class="card-body">
+                <span class="badge bg-secondary estado">PENDIENTE</span>
+
+                <p class="mt-3">
+                    El sistema debe permitir registrar productos nuevos.
+                </p>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                           name="requerimiento1" id="req1Necesario"
+                           value="necesario"
+                           onchange="clasificar(1, 'necesario')">
+
+                    <label class="form-check-label text-info"
+                           for="req1Necesario">
+                        Necesario
+                    </label>
+                </div>
+
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio"
+                           name="requerimiento1" id="req1NoNecesario"
+                           value="no-necesario"
+                           onchange="clasificar(1, 'no-necesario')">
+
+                    <label class="form-check-label text-warning"
+                           for="req1NoNecesario">
+                        No necesario
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TARJETA 2 -->
+    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+        <div class="card bg-black border-info text-light h-100"
+             data-id="4">
+
+            <div class="card-body">
+                <span class="badge bg-secondary estado">PENDIENTE</span>
+
+                <p class="mt-3">
+                    El sistema debe actualizar el stock cuando se vende
+                    un producto.
+                </p>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                           name="requerimiento4" id="req4Necesario"
+                           value="necesario"
+                           onchange="clasificar(4, 'necesario')">
+
+                    <label class="form-check-label text-info"
+                           for="req4Necesario">
+                        Necesario
+                    </label>
+                </div>
+
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio"
+                           name="requerimiento4" id="req4NoNecesario"
+                           value="no-necesario"
+                           onchange="clasificar(4, 'no-necesario')">
+
+                    <label class="form-check-label text-warning"
+                           for="req4NoNecesario">
+                        No necesario
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TARJETA 3 -->
+    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+        <div class="card bg-black border-info text-light h-100"
+             data-id="5">
+
+            <div class="card-body">
+                <span class="badge bg-secondary estado">PENDIENTE</span>
+
+                <p class="mt-3">
+                    Solo los usuarios registrados pueden ingresar
+                    al sistema.
+                </p>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                           name="requerimiento5" id="req5Necesario"
+                           value="necesario"
+                           onchange="clasificar(5, 'necesario')">
+
+                    <label class="form-check-label text-info"
+                           for="req5Necesario">
+                        Necesario
+                    </label>
+                </div>
+
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio"
+                           name="requerimiento5" id="req5NoNecesario"
+                           value="no-necesario"
+                           onchange="clasificar(5, 'no-necesario')">
+
+                    <label class="form-check-label text-warning"
+                           for="req5NoNecesario">
+                        No necesario
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TARJETA 4 -->
+    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+        <div class="card bg-black border-info text-light h-100"
+             data-id="6">
+
+            <div class="card-body">
+                <span class="badge bg-secondary estado">PENDIENTE</span>
+
+                <p class="mt-3">
+                    El sistema debe generar un reporte de existencias
+                    por categoría.
+                </p>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio"
+                           name="requerimiento6" id="req6Necesario"
+                           value="necesario"
+                           onchange="clasificar(6, 'necesario')">
+
+                    <label class="form-check-label text-info"
+                           for="req6Necesario">
+                        Necesario
+                    </label>
+                </div>
+
+                <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio"
+                           name="requerimiento6" id="req6NoNecesario"
+                           value="no-necesario"
+                           onchange="clasificar(6, 'no-necesario')">
+
+                    <label class="form-check-label text-warning"
+                           for="req6NoNecesario">
+                        No necesario
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- CONFIRMAR ANÁLISIS -->
+<button class="btn btn-info w-100 fw-bold mb-3"
+        id="btnConfirmar">
+    CONFIRMAR ANÁLISIS
+</button>
