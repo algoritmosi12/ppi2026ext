@@ -39,7 +39,7 @@
             <div class="col-6 col-lg-3 mb-3">
                 <div class="card bg-black border-info text-center h-100">
                     <div class="card-body">
-                        <<h6 class="text-success">PRESUPUESTO</h6>
+                        <h6 class="text-success">PRESUPUESTO</h6>
                         <h4 id="presupuesto" class="text-info">$16.900</h4>
                     </div>
                 </div>
@@ -86,176 +86,156 @@
                     Con la información del relevamiento, tu equipo debe
                     convertir las necesidades del cliente en requerimientos.
                 </p>
+            </div>
+        </div>
 
 
         <!-- REQUERIMIENTOS -->
-<h3 class="mb-3">¿Es necesario para el sistema?</h3>
+        <h3 class="mb-3">¿Es necesario para el sistema?</h3>
 
-<div class="row" id="listaRequerimientos">
+        <div class="row" id="listaRequerimientos">
 
-    <!-- TARJETA 1 -->
-    <div class="col-12 col-sm-6 col-lg-3 mb-3">
-        <div class="card bg-black border-info text-light h-100"
-             data-id="1">
+            <!-- TARJETA 1 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                <div class="card bg-black border-info text-light h-100" data-id="1">
+                    <div class="card-body">
+                        <span class="badge bg-secondary estado">PENDIENTE</span>
 
-            <div class="card-body">
-                <span class="badge bg-secondary estado">PENDIENTE</span>
+                        <p class="mt-3">
+                            El sistema debe permitir registrar productos nuevos.
+                        </p>
 
-                <p class="mt-3">
-                    El sistema debe permitir registrar productos nuevos.
-                </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"
+                                   name="requerimiento1" id="req1Necesario"
+                                   value="necesario"
+                                   onchange="clasificar(1, 'necesario', 1200, '30m')">
+                            <label class="form-check-label text-info" for="req1Necesario">
+                                Necesario <small class="text-info">($1.200 - 1m)</small>
+                            </label>
+                        </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio"
-                           name="requerimiento1" id="req1Necesario"
-                           value="necesario"
-                           onchange="clasificar(1, 'necesario')">
-
-                    <label class="form-check-label text-info"
-                           for="req1Necesario">
-                        Necesario
-                    </label>
-                </div>
-
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="radio"
-                           name="requerimiento1" id="req1NoNecesario"
-                           value="no-necesario"
-                           onchange="clasificar(1, 'no-necesario')">
-
-                    <label class="form-check-label text-warning"
-                           for="req1NoNecesario">
-                        No necesario
-                    </label>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                   name="requerimiento1" id="req1NoNecesario"
+                                   value="no-necesario"
+                                   onchange="clasificar(1, 'no-necesario', 0, '0m')">
+                            <label class="form-check-label text-warning" for="req1NoNecesario">
+                                No necesario <small class="text-info">($0 - 0m)</small>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- TARJETA 2 -->
-    <div class="col-12 col-sm-6 col-lg-3 mb-3">
-        <div class="card bg-black border-info text-light h-100"
-             data-id="4">
+            <!-- TARJETA 2 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                <div class="card bg-black border-info text-light h-100" data-id="4">
+                    <div class="card-body">
+                        <span class="badge bg-secondary estado">PENDIENTE</span>
 
-            <div class="card-body">
-                <span class="badge bg-secondary estado">PENDIENTE</span>
+                        <p class="mt-3">
+                            El sistema debe actualizar el stock cuando se vende un producto.
+                        </p>
 
-                <p class="mt-3">
-                    El sistema debe actualizar el stock cuando se vende
-                    un producto.
-                </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"
+                                   name="requerimiento4" id="req4Necesario"
+                                   value="necesario"
+                                   onchange="clasificar(4, 'necesario', 1500, '45m')">
+                            <label class="form-check-label text-info" for="req4Necesario">
+                                Necesario <small class="text-info">($1.500 - 3m)</small>
+                            </label>
+                        </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio"
-                           name="requerimiento4" id="req4Necesario"
-                           value="necesario"
-                           onchange="clasificar(4, 'necesario')">
-
-                    <label class="form-check-label text-info"
-                           for="req4Necesario">
-                        Necesario
-                    </label>
-                </div>
-
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="radio"
-                           name="requerimiento4" id="req4NoNecesario"
-                           value="no-necesario"
-                           onchange="clasificar(4, 'no-necesario')">
-
-                    <label class="form-check-label text-warning"
-                           for="req4NoNecesario">
-                        No necesario
-                    </label>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                   name="requerimiento4" id="req4NoNecesario"
+                                   value="no-necesario"
+                                   onchange="clasificar(4, 'no-necesario', 0, '0m')">
+                            <label class="form-check-label text-warning" for="req4NoNecesario">
+                                No necesario <small class="text-info">($0 - 0m)</small>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- TARJETA 3 -->
-    <div class="col-12 col-sm-6 col-lg-3 mb-3">
-        <div class="card bg-black border-info text-light h-100"
-             data-id="5">
+            <!-- TARJETA 3 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                <div class="card bg-black border-info text-light h-100" data-id="5">
+                    <div class="card-body">
+                        <span class="badge bg-secondary estado">PENDIENTE</span>
 
-            <div class="card-body">
-                <span class="badge bg-secondary estado">PENDIENTE</span>
+                        <p class="mt-3">
+                            Solo los usuarios registrados pueden ingresar al sistema.
+                        </p>
 
-                <p class="mt-3">
-                    Solo los usuarios registrados pueden ingresar
-                    al sistema.
-                </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"
+                                   name="requerimiento5" id="req5Necesario"
+                                   value="necesario"
+                                   onchange="clasificar(5, 'necesario', 1000, '30m')">
+                            <label class="form-check-label text-info" for="req5Necesario">
+                                Necesario <small class="text-info">($1.000 - 1m)</small>
+                            </label>
+                        </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio"
-                           name="requerimiento5" id="req5Necesario"
-                           value="necesario"
-                           onchange="clasificar(5, 'necesario')">
-
-                    <label class="form-check-label text-info"
-                           for="req5Necesario">
-                        Necesario
-                    </label>
-                </div>
-
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="radio"
-                           name="requerimiento5" id="req5NoNecesario"
-                           value="no-necesario"
-                           onchange="clasificar(5, 'no-necesario')">
-
-                    <label class="form-check-label text-warning"
-                           for="req5NoNecesario">
-                        No necesario
-                    </label>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                   name="requerimiento5" id="req5NoNecesario"
+                                   value="no-necesario"
+                                   onchange="clasificar(5, 'no-necesario', 0, '0m')">
+                            <label class="form-check-label text-warning" for="req5NoNecesario">
+                                No necesario <small class="text-info">($0 - 0m)</small>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- TARJETA 4 -->
-    <div class="col-12 col-sm-6 col-lg-3 mb-3">
-        <div class="card bg-black border-info text-light h-100"
-             data-id="6">
+            <!-- TARJETA 4 -->
+            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                <div class="card bg-black border-info text-light h-100" data-id="6">
+                    <div class="card-body">
+                        <span class="badge bg-secondary estado">PENDIENTE</span>
 
-            <div class="card-body">
-                <span class="badge bg-secondary estado">PENDIENTE</span>
+                        <p class="mt-3">
+                            El sistema debe generar un reporte de existencias por categoría.
+                        </p>
 
-                <p class="mt-3">
-                    El sistema debe generar un reporte de existencias
-                    por categoría.
-                </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio"
+                                   name="requerimiento6" id="req6Necesario"
+                                   value="necesario"
+                                   onchange="clasificar(6, 'necesario', 1800, '1h')">
+                            <label class="form-check-label text-info" for="req6Necesario">
+                                Necesario <small class="text-info">($1.800 - 2min)</small>
+                            </label>
+                        </div>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio"
-                           name="requerimiento6" id="req6Necesario"
-                           value="necesario"
-                           onchange="clasificar(6, 'necesario')">
-
-                    <label class="form-check-label text-info"
-                           for="req6Necesario">
-                        Necesario
-                    </label>
-                </div>
-
-                <div class="form-check mt-2">
-                    <input class="form-check-input" type="radio"
-                           name="requerimiento6" id="req6NoNecesario"
-                           value="no-necesario"
-                           onchange="clasificar(6, 'no-necesario')">
-
-                    <label class="form-check-label text-warning"
-                           for="req6NoNecesario">
-                        No necesario
-                    </label>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="radio"
+                                   name="requerimiento6" id="req6NoNecesario"
+                                   value="no-necesario"
+                                   onchange="clasificar(6, 'no-necesario', 0, '0m')">
+                            <label class="form-check-label text-warning" for="req6NoNecesario">
+                                No necesario <small class="text-info">">($0 - 0m)</small>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
+
+        <!-- CONFIRMAR ANÁLISIS -->
+        <button class="btn btn-info w-100 fw-bold mb-3"
+                id="btnConfirmar">
+            CONFIRMAR ANÁLISIS
+        </button>
+
     </div>
 
-</div>
-
-<!-- CONFIRMAR ANÁLISIS -->
-<button class="btn btn-info w-100 fw-bold mb-3"
-        id="btnConfirmar">
-    CONFIRMAR ANÁLISIS
-</button>
+</body>
+</html>
