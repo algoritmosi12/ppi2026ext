@@ -22,8 +22,10 @@
                 <h6 class="text-info text-center">
                     Proyecto de Gestión de Software
                 </h6>
-                <p class="text-light text-end mb-0">Usuario: <span id="nombreUsuario"></span></p>
             </div>
+        </div>
+        <div class="text-end mt-2">
+            <span class="btn btn-primary text-white fw-bold">USUARIO: <strong id="nombreUsuario"></strong></span>
         </div>
 
         <div class="text-end">
@@ -331,7 +333,6 @@
     </div>
 
     <!-- JAVASCRIPT -->
-    <script src="../js/Etapa3.js"></script>
     <script>
         const partida = JSON.parse(sessionStorage.getItem("partida") || "null");
         if (partida && typeof partida.username === "string") {

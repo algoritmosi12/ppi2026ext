@@ -6,5 +6,5 @@ if (partida && typeof partida.username === "string") {
 }
 
 btnConfirmar.addEventListener("click", () => {
-    window.location.href = "pagina4.html";
+    window.location.href = "etapa3.html";
 });

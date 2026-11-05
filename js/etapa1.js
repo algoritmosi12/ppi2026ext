@@ -12,6 +12,6 @@ btnConfirmar.addEventListener("click", () => {
 });
 
 btnContinuar.addEventListener("click", () => {
-    window.location.href = "pagina3.html";
+    window.location.href = "etapa2.html";
 });
     
