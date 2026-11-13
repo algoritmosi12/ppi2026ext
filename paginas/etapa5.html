@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVQUEST - Etapa 5</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-success text-light">
+  <header class="container-fluid bg-black py-3 mb-4">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="text-white mb-0">🚀 DEVQUEST</h1>
+        <span class="badge bg-info fs-6">ETAPA 5</span>
+      </div>
+      <p class="text-info mb-0 mt-1">Proyecto de Gestión de Software</p>
+    </div>
+    <div class="text-end mt-2 container">
+      <span class="btn btn-info text-white fw-bold">USUARIO: <strong id="nombreUsuario"></strong></span>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="card bg-black border-warning text-center text-warning mb-4">
+      <div class="card-body">
+        <h3>⏱️ TIEMPO RESTANTE</h3>
+        <div id="reloj" class="display-4 fw-bold">03:00</div>
+      </div>
+    </div>
+
+    <div class="row g-3 mb-4">
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-info border-info h-100"><div class="card-body text-center">
+          <h6 class="text-light">PRESUPUESTO</h6><h3 id="presupuesto" class="text-info">$20.000</h3>
+        </div></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-light border-info h-100"><div class="card-body text-center">
+          <h6 class="text-white">TIEMPO DE ETAPA</h6><h3 class="text-info">03:00 min</h3>
+        </div></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-light border-info h-100"><div class="card-body text-center">
+          <h6 class="text-light">ROL</h6><h3 class="text-info">Project Manager</h3>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="card bg-black border-info text-light mb-4">
+      <div class="card-body">
+        <h2 class="text-success">📋 Etapa 5 — Pruebas</h2>
+        <p class="text-light">Decidir qué errores solucionar primero y si el sistema está listo para avanzar.</p>
+        <div class="alert alert-info mb-0">💡 <strong>Tu objetivo:</strong> elegí la mejor decisión para resolver cada situación.</div>
+      </div>
+    </div>
+
+    <form id="quiz">
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 1</h5>
+          <p>Queda la mitad del tiempo que necesitan las pruebas. El contrato tiene una multa de $2.000 por entregar tarde. ¿Qué decidís?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p1" value="A" required>
+            <span class="text-light">A) Entregar en fecha con la mitad de las pruebas</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p1" value="B" required>
+            <span class="text-light">B) Atrasar la entrega</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p1" value="C" required>
+            <span class="text-light">C) Contratar testers externos para probar todo a tiempo</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 2</h5>
+          <p>Justo antes de la entrega aparece un error grave en la facturación, que es la función central del sistema. ¿Qué hacés?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p2" value="A" required>
+            <span class="text-light">A) Entregar en fecha y corregirlo después</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p2" value="B" required>
+            <span class="text-light">B) Avisarle al cliente y postergar la entrega hasta corregirlo</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p2" value="C" required>
+            <span class="text-light">C) Entregar en fecha con la facturación deshabilitada</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 3</h5>
+          <p>No hay testers en el equipo y el presupuesto está justo. ¿Quién prueba?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p3" value="A" required>
+            <span class="text-light">A) Cada programador prueba su propio código</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p3" value="B" required>
+            <span class="text-light">B) Los programadores prueban cruzado: cada uno prueba el código de otro</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p3" value="C" required>
+            <span class="text-light">C) Contratar una empresa de testing</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 4</h5>
+          <p>Las pruebas encontraron 30 errores menores y no hay tiempo para corregir todos. ¿Qué decidís?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p4" value="A" required>
+            <span class="text-light">A) Corregir todos antes de entregar</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p4" value="B" required>
+            <span class="text-light">B) Clasificarlos por gravedad, corregir los importantes y acordar con el cliente el resto para la primera actualización</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p4" value="C" required>
+            <span class="text-light">C) Entregar así y corregir lo que el cliente reclame</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-success text-light mt-4">
+        <div class="card-body">
+          <h3 class="text-success">📊 Resultado de la etapa</h3>
+          <div id="feedback" class="alert d-none mt-3"></div>
+          <p class="mb-1">Puntaje: <strong id="score">0</strong> / 4</p>
+          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS</button>
+          <div class="d-flex justify-content-between flex-wrap gap-2 mt-4">
+            <button type="button" onclick="window.location.href='etapa4.html'" class="btn btn-outline-light">⬅️ ETAPA ANTERIOR</button>
+            <button type="button" id="btnSiguiente" class="btn btn-primary" disabled>➡️ SIGUIENTE ETAPA</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="etapa5.js"></script>
+</body>
+</html>
