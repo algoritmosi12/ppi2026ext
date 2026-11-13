@@ -5,6 +5,7 @@ if (partida && typeof partida.username === "string") {
     document.getElementById("nombreUsuario").textContent = partida.username;
 }
 
-btnConfirmar.addEventListener("click", () => {
+btnConfirmar.addEventListener("click", (event) => {
+    event.preventDefault();
     window.location.href = "etapa3.html";
 });
