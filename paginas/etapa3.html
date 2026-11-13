@@ -1,344 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet">
-
-    <title>DEVQUEST - Etapa 3</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVQUEST - Etapa 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body class="bg-success text-light">
-
-    <div class="container mt-3">
-
-        <!-- ENCABEZADO -->
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center fw-bold">DEVQUEST</h1>
-                <h6 class="text-info text-center">
-                    Proyecto de Gestión de Software
-                </h6>
-            </div>
-        </div>
-        <div class="text-end mt-2">
-            <span class="btn btn-primary text-white fw-bold">USUARIO: <strong id="nombreUsuario"></strong></span>
-        </div>
-
-        <div class="text-end">
-            <span class="badge bg-info text-dark p-2">ETAPA 3</span>
-        </div>
-
-        <!-- TEMPORIZADOR -->
-        <div class="card bg-black border-warning text-light mt-3 mb-3">
-            <div class="card-body text-center">
-                <h5 class="text-warning">TIEMPO RESTANTE</h5>
-                <h1 id="tiempo" class="text-warning fw-bold">12:00</h1>
-            </div>
-        </div>
-
-        <!-- ESTADÍSTICAS -->
-        <div class="row">
-
-            <div class="col-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-center h-100">
-                    <div class="card-body">
-                        <h6>PRESUPUESTO</h6>
-                        <h4 id="presupuesto" class="text-info">$16.900</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-center h-100">
-                    <div class="card-body">
-                        <h6>ROL</h6>
-                        <h5 class="text-info">Project Manager</h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-center h-100">
-                    <div class="card-body">
-                        <h6>TAREAS COMPLETADAS</h6>
-                        <h4 class="text-info" id="tareas">0 / 4</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-center h-100">
-                    <div class="card-body">
-                        <h6>ERRORES</h6>
-                        <h4 class="text-info" id="errores">0</h4>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- DESCRIPCIÓN -->
-        <div class="card bg-black border-info text-light mb-3">
-            <div class="card-body">
-
-                <h3 class="text-success">
-                    Etapa 3 — Desarrollo de Software
-                </h3>
-
-                <p>
-                    Llegó el momento de convertir los requerimientos
-                    del cliente en funcionalidades reales del sistema.
-                </p>
-
-                <p>
-                    Organizá el equipo de desarrollo, completá las tareas
-                    de programación, controlá los errores y realizá las
-                    pruebas antes de entregar el sistema.
-                </p>
-
-                <div class="alert alert-info mb-0">
-                    <strong>Objetivo:</strong>
-                    desarrollar las cuatro funcionalidades y probar
-                    el sistema antes de que se termine el tiempo
-                    o el presupuesto.
-                </div>
-
-            </div>
-        </div>
-
-        <!-- PROGRESO -->
-        <div class="card bg-black border-info mb-4">
-            <div class="card-body">
-
-                <div class="d-flex justify-content-between">
-                    <strong>Progreso del desarrollo</strong>
-                    <span id="porcentaje">0%</span>
-                </div>
-
-                <div class="progress mt-2">
-                    <div id="progreso"
-                         class="progress-bar bg-info"
-                         style="width: 0%">
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- TAREAS -->
-        <h3 class="mb-3">Tareas de desarrollo</h3>
-
-        <div class="row">
-
-            <!-- TAREA 1 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-light h-100"
-                     data-id="1">
-
-                    <div class="card-body">
-
-                        <span class="badge bg-secondary estado">
-                            PENDIENTE
-                        </span>
-
-                        <h5 class="text-info mt-3">
-                            Registro de productos
-                        </h5>
-
-                        <p>
-                            Programar la función para registrar nuevos
-                            productos en el inventario.
-                        </p>
-
-                        <hr>
-
-                        <p class="mb-1">Dificultad: Fácil</p>
-                        <p class="mb-1">Costo: $2.000</p>
-                        <p>Tiempo: 60 segundos</p>
-
-                        <button class="btn btn-info w-100 mt-2"
-                                onclick="desarrollar(1)">
-                            DESARROLLAR
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAREA 2 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-light h-100"
-                     data-id="2">
-
-                    <div class="card-body">
-
-                        <span class="badge bg-secondary estado">
-                            PENDIENTE
-                        </span>
-
-                        <h5 class="text-info mt-3">
-                            Actualización del stock
-                        </h5>
-
-                        <p>
-                            Programar la actualización automática del stock
-                            cuando se vende un producto.
-                        </p>
-
-                        <hr>
-
-                        <p class="mb-1">Dificultad: Media</p>
-                        <p class="mb-1">Costo: $3.000</p>
-                        <p>Tiempo: 90 segundos</p>
-
-                        <button class="btn btn-info w-100 mt-2"
-                                onclick="desarrollar(2)">
-                            DESARROLLAR
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAREA 3 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-light h-100"
-                     data-id="3">
-
-                    <div class="card-body">
-
-                        <span class="badge bg-secondary estado">
-                            PENDIENTE
-                        </span>
-
-                        <h5 class="text-info mt-3">
-                            Reportes de inventario
-                        </h5>
-
-                        <p>
-                            Crear reportes para consultar las existencias
-                            de productos por categoría.
-                        </p>
-
-                        <hr>
-
-                        <p class="mb-1">Dificultad: Media</p>
-                        <p class="mb-1">Costo: $2.500</p>
-                        <p>Tiempo: 75 segundos</p>
-
-                        <button class="btn btn-info w-100 mt-2"
-                                onclick="desarrollar(3)">
-                            DESARROLLAR
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- TAREA 4 -->
-            <div class="col-12 col-md-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-light h-100"
-                     data-id="4">
-
-                    <div class="card-body">
-
-                        <span class="badge bg-secondary estado">
-                            PENDIENTE
-                        </span>
-
-                        <h5 class="text-info mt-3">
-                            Control de usuarios
-                        </h5>
-
-                        <p>
-                            Programar el acceso al sistema para que
-                            solamente ingresen usuarios autorizados.
-                        </p>
-
-                        <hr>
-
-                        <p class="mb-1">Dificultad: Difícil</p>
-                        <p class="mb-1">Costo: $3.500</p>
-                        <p>Tiempo: 100 segundos</p>
-
-                        <button class="btn btn-info w-100 mt-2"
-                                onclick="desarrollar(4)">
-                            DESARROLLAR
-                        </button>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- PRUEBAS -->
-        <div class="card bg-black border-warning text-light mt-3 mb-3">
-            <div class="card-body">
-
-                <h4 class="text-warning">Pruebas del sistema</h4>
-
-                <p>
-                    Una vez desarrolladas las cuatro funcionalidades,
-                    ejecutá las pruebas para comprobar que el sistema
-                    funciona correctamente.
-                </p>
-
-                <button id="btnPruebas"
-                        class="btn btn-warning w-100"
-                        onclick="probarSistema()"
-                        disabled>
-                    PROBAR SISTEMA
-                </button>
-
-                <p id="resultadoPruebas" class="mt-3 mb-0"></p>
-
-            </div>
-        </div>
-
-        <!-- EVENTO -->
-        <div class="card bg-black border-danger text-light mb-3">
-            <div class="card-body">
-
-                <h5 class="text-danger">¡Atención, equipo!</h5>
-
-                <p class="mb-0">
-                    Los errores de programación pueden retrasar el proyecto.
-                    Reservá tiempo para las pruebas y no gastes todo el
-                    presupuesto antes de terminar.
-                </p>
-
-            </div>
-        </div>
-
-        <!-- RESULTADO -->
-        <div id="resultadoFinal"
-             class="alert alert-success text-center d-none">
-
-            <h3 id="tituloFinal">¡Etapa completada!</h3>
-
-            <p id="mensajeFinal"></p>
-
-            <button class="btn btn-primary"
-                    onclick="continuarEtapa()">
-                CONTINUAR
-            </button>
-
-        </div>
-
+  <header class="container-fluid bg-black py-3 mb-4">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="text-white mb-0">🚀 DEVQUEST</h1>
+        <span class="badge bg-info fs-6">ETAPA 3</span>
+      </div>
+      <p class="text-info mb-0 mt-1">Proyecto de Gestión de Software</p>
+    </div>
+    <div class="text-end mt-2 container">
+      <span class="btn btn-info text-white fw-bold">USUARIO: <strong id="nombreUsuario"></strong></span>
+    </div>
+  </header>
+
+  <main class="container pb-5">
+    <div class="card bg-black border-warning text-center text-warning mb-4">
+      <div class="card-body">
+        <h3>⏱️ TIEMPO RESTANTE</h3>
+        <div id="reloj" class="display-4 fw-bold">03:00</div>
+      </div>
     </div>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        const partida = JSON.parse(sessionStorage.getItem("partida") || "null");
-        if (partida && typeof partida.username === "string") {
-            document.getElementById("nombreUsuario").textContent = partida.username;
-        }
-    </script>
+    <div class="row g-3 mb-4">
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-info border-info h-100"><div class="card-body text-center">
+          <h6 class="text-light">PRESUPUESTO</h6><h3 id="presupuesto" class="text-info">$20.000</h3>
+        </div></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-light border-info h-100"><div class="card-body text-center">
+          <h6 class="text-white">TIEMPO DE ETAPA</h6><h3 class="text-info">03:00 min</h3>
+        </div></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-light border-info h-100"><div class="card-body text-center">
+          <h6 class="text-light">ROL</h6><h3 class="text-info">Project Manager</h3>
+        </div></div>
+      </div>
+    </div>
 
+    <div class="card bg-black border-info text-light mb-4">
+      <div class="card-body">
+        <h2 class="text-success">📋 Etapa 3 — Desarrollo de software</h2>
+        <p class="text-light">Resolver retrasos, administrar programadores y controlar el presupuesto.</p>
+        <div class="alert alert-info mb-0">💡 <strong>Tu objetivo:</strong> elegí la mejor decisión para resolver cada situación.</div>
+      </div>
+    </div>
+
+    <form id="quiz">
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 1</h5>
+          <p>El desarrollo viene atrasado. ¿Qué decidís?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p1" value="A" required>
+            <span class="text-light">A) Sumar dos programadores</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p1" value="B" required>
+            <span class="text-light">B) Pedir horas extra al equipo</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p1" value="C" required>
+            <span class="text-light">C) Renegociar con el cliente: lo esencial en la fecha pactada y el resto en una segunda entrega</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 2</h5>
+          <p>Tu mejor programador recibe una oferta de otra empresa. Es el único que conoce el módulo central y falta poco para terminar. ¿Qué hacés?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p2" value="A" required>
+            <span class="text-light">A) Igualarle la oferta para que se quede hasta terminar</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p2" value="B" required>
+            <span class="text-light">B) Dejarlo ir y contratar un reemplazo</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p2" value="C" required>
+            <span class="text-light">C) Dejarlo ir y repartir su trabajo entre el resto</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 3</h5>
+          <p>A mitad del desarrollo, el cliente pide una función nueva que no estaba en los requerimientos. ¿Qué hacés?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p3" value="A" required>
+            <span class="text-light">A) Incluirla sin cargo para cuidar la relación</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p3" value="B" required>
+            <span class="text-light">B) Presupuestarla como un cambio, con su costo y su plazo, y que el cliente decida</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p3" value="C" required>
+            <span class="text-light">C) Rechazarla porque el alcance ya está cerrado</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 4</h5>
+          <p>Un programador se enferma y sus tareas son las que definen la fecha de entrega. ¿Qué decidís?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p4" value="A" required>
+            <span class="text-light">A) Contratar un programador temporal para cubrirlo</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p4" value="B" required>
+            <span class="text-light">B) Repartir sus tareas entre el equipo y postergar otras</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p4" value="C" required>
+            <span class="text-light">C) Esperar a que vuelva</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-success text-light mt-4">
+        <div class="card-body">
+          <h3 class="text-success">📊 Resultado de la etapa</h3>
+          <div id="feedback" class="alert d-none mt-3"></div>
+          <p class="mb-1">Puntaje: <strong id="score">0</strong> / 4</p>
+          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS</button>
+          <div class="d-flex justify-content-between flex-wrap gap-2 mt-4">
+            <button type="button" id="etapa2.html'" class="btn btn-outline-light">⬅️ ETAPA ANTERIOR</button>
+            <button type="button" id="btnSiguiente" class="btn btn-primary" disabled>➡️ SIGUIENTE ETAPA</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="etapa4.js"></script>
 </body>
 </html>

@@ -1,249 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-          rel="stylesheet">
-
-    <title>DEVQUEST - Etapa 2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVQUEST - Etapa 2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body class="bg-success text-light">
+  <header class="container-fluid bg-black py-3 mb-4">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h1 class="text-white mb-0">🚀 DEVQUEST</h1>
+        <span class="badge bg-info fs-6">ETAPA 2</span>
+      </div>
+      <p class="text-info mb-0 mt-1">Proyecto de Gestión de Software</p>
+    </div>
+    <div class="text-end mt-2 container">
+      <span class="btn btn-info text-white fw-bold">USUARIO: <strong id="nombreUsuario"></strong></span>
+    </div>
+  </header>
 
-    <div class="container mt-3">
-
-        <!-- ENCABEZADO -->
-        <div class="row">
-            <div class="col">
-                <h1 class="text-center fw-bold">DEVQUEST</h1>
-                <h6 class="text-info text-center">
-                    Proyecto de Gestión de Software
-                </h6>
-            </div>
-        </div>
-        <div class="text-end">
-            <span class="badge bg-info text-dark p-2">ETAPA 2</span>
-        </div>
-        <div class="text-end mt-2">
-            <span class="btn btn-primary text-white fw-bold">USUARIO: <strong id="nombreUsuario"></strong></span>
-        </div>
-
-        <!-- TIEMPO RESTANTE -->
-        <div class="card bg-black border-warning text-light mt-4 mb-3">
-            <div class="card-body text-center">
-                <h5 class="text-warning">TIEMPO RESTANTE</h5>
-                <h1 id="tiempo" class="text-warning fw-bold">16:40</h1>
-            </div>
-        </div>
-
-        <!-- ESTADÍSTICAS -->
-        <div class="row">
-
-            <div class="col-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-center h-100">
-                    <div class="card-body">
-                        <h6 class="text-success">PRESUPUESTO</h6>
-                        <h4 id="presupuesto" class="text-info">$16.900</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-center h-100">
-                    <div class="card-body">
-                        <h6 class="text-success">TIEMPO ETAPA</h6>
-                        <h4 class="text-info">02:15</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-center h-100">
-                    <div class="card-body">
-                         <h6 class="text-success">ROL</h6>
-                        <h4 class="text-info">Project Manager</h4>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-center h-100">
-                    <div class="card-body">
-                        <h6 class="text-success">EQUIPO</h6>
-                        <p class="text-info mb-0">1 Senior - 2 Semi Sr</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- INFORMACIÓN DE LA ETAPA -->
-        <div class="card bg-black border-info text-light mb-3">
-            <div class="card-body">
-
-                <h3 class="text-success">
-                    Etapa 2 — Análisis del Sistema
-                </h3>
-
-                <p>
-                    Con la información del relevamiento, tu equipo debe
-                    convertir las necesidades del cliente en requerimientos.
-                </p>
-            </div>
-        </div>
-
-
-        <!-- REQUERIMIENTOS -->
-        <h3 class="mb-3">¿Es necesario para el sistema?</h3>
-
-        <div class="row" id="listaRequerimientos">
-
-            <!-- TARJETA 1 -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-light h-100" data-id="1">
-                    <div class="card-body">
-                        <span class="badge bg-secondary estado">PENDIENTE</span>
-
-                        <p class="mt-3">
-                            El sistema debe permitir registrar productos nuevos.
-                        </p>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio"
-                                   name="requerimiento1" id="req1Necesario"
-                                   value="necesario"
-                                   onchange="clasificar(1, 'necesario', 1200, '30m')">
-                            <label class="form-check-label text-info" for="req1Necesario">
-                                Necesario <small class="text-info">($1.200 - 1m)</small>
-                            </label>
-                        </div>
-
-                        <div class="form-check mt-2">
-                            <input class="form-check-input" type="radio"
-                                   name="requerimiento1" id="req1NoNecesario"
-                                   value="no-necesario"
-                                   onchange="clasificar(1, 'no-necesario', 0, '0m')">
-                            <label class="form-check-label text-warning" for="req1NoNecesario">
-                                No necesario <small class="text-info">($0 - 0m)</small>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TARJETA 2 -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-light h-100" data-id="4">
-                    <div class="card-body">
-                        <span class="badge bg-secondary estado">PENDIENTE</span>
-
-                        <p class="mt-3">
-                            El sistema debe actualizar el stock cuando se vende un producto.
-                        </p>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio"
-                                   name="requerimiento4" id="req4Necesario"
-                                   value="necesario"
-                                   onchange="clasificar(4, 'necesario', 1500, '45m')">
-                            <label class="form-check-label text-info" for="req4Necesario">
-                                Necesario <small class="text-info">($1.500 - 3m)</small>
-                            </label>
-                        </div>
-
-                        <div class="form-check mt-2">
-                            <input class="form-check-input" type="radio"
-                                   name="requerimiento4" id="req4NoNecesario"
-                                   value="no-necesario"
-                                   onchange="clasificar(4, 'no-necesario', 0, '0m')">
-                            <label class="form-check-label text-warning" for="req4NoNecesario">
-                                No necesario <small class="text-info">($0 - 0m)</small>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TARJETA 3 -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-light h-100" data-id="5">
-                    <div class="card-body">
-                        <span class="badge bg-secondary estado">PENDIENTE</span>
-
-                        <p class="mt-3">
-                            Solo los usuarios registrados pueden ingresar al sistema.
-                        </p>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio"
-                                   name="requerimiento5" id="req5Necesario"
-                                   value="necesario"
-                                   onchange="clasificar(5, 'necesario', 1000, '30m')">
-                            <label class="form-check-label text-info" for="req5Necesario">
-                                Necesario <small class="text-info">($1.000 - 1m)</small>
-                            </label>
-                        </div>
-
-                        <div class="form-check mt-2">
-                            <input class="form-check-input" type="radio"
-                                   name="requerimiento5" id="req5NoNecesario"
-                                   value="no-necesario"
-                                   onchange="clasificar(5, 'no-necesario', 0, '0m')">
-                            <label class="form-check-label text-warning" for="req5NoNecesario">
-                                No necesario <small class="text-info">($0 - 0m)</small>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TARJETA 4 -->
-            <div class="col-12 col-sm-6 col-lg-3 mb-3">
-                <div class="card bg-black border-info text-light h-100" data-id="6">
-                    <div class="card-body">
-                        <span class="badge bg-secondary estado">PENDIENTE</span>
-
-                        <p class="mt-3">
-                            El sistema debe generar un reporte de existencias por categoría.
-                        </p>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio"
-                                   name="requerimiento6" id="req6Necesario"
-                                   value="necesario"
-                                   onchange="clasificar(6, 'necesario', 1800, '1h')">
-                            <label class="form-check-label text-info" for="req6Necesario">
-                                Necesario <small class="text-info">($1.800 - 2min)</small>
-                            </label>
-                        </div>
-
-                        <div class="form-check mt-2">
-                            <input class="form-check-input" type="radio"
-                                   name="requerimiento6" id="req6NoNecesario"
-                                   value="no-necesario"
-                                   onchange="clasificar(6, 'no-necesario', 0, '0m')">
-                            <label class="form-check-label text-warning" for="req6NoNecesario">
-                                No necesario <small class="text-info">">($0 - 0m)</small>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CONFIRMAR ANÁLISIS -->
-        <button class="btn btn-info w-100 fw-bold mb-3"
-                id="btnConfirmar"
-                type="button">
-            CONFIRMAR ANÁLISIS
-        </button>
-
+  <main class="container pb-5">
+    <div class="card bg-black border-warning text-center text-warning mb-4">
+      <div class="card-body">
+        <h3>⏱️ TIEMPO RESTANTE</h3>
+        <div id="reloj" class="display-4 fw-bold">03:00</div>
+      </div>
     </div>
 
-    <script src="../js/etapa2.js" type="module"></script>
+    <div class="row g-3 mb-4">
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-info border-info h-100"><div class="card-body text-center">
+          <h6 class="text-light">PRESUPUESTO</h6><h3 id="presupuesto" class="text-info">$20.000</h3>
+        </div></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-light border-info h-100"><div class="card-body text-center">
+          <h6 class="text-white">TIEMPO DE ETAPA</h6><h3 class="text-info">03:00 min</h3>
+        </div></div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card bg-black text-light border-info h-100"><div class="card-body text-center">
+          <h6 class="text-light">ROL</h6><h3 class="text-info">Project Manager</h3>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="card bg-black border-info text-light mb-4">
+      <div class="card-body">
+        <h2 class="text-success">📋 Etapa 2 — Análisis del sistema</h2>
+        <p class="text-light">Definir requerimientos, resolver contradicciones y acordar el alcance con el cliente.</p>
+        <div class="alert alert-info mb-0">💡 <strong>Tu objetivo:</strong> elegí la mejor decisión para resolver cada situación.</div>
+      </div>
+    </div>
+
+    <form id="quiz">
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 1</h5>
+          <p>La lista de requerimientos supera el presupuesto en un 30% y el cliente ya avisó que no puede poner más plata. ¿Qué decidís?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p1" value="A" required>
+            <span class="text-light">A) Insistir con un pedido de ampliación de presupuesto</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p1" value="B" required>
+            <span class="text-light">B) Acordar con el cliente una primera versión con lo esencial y dejar el resto para una segunda etapa</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p1" value="C" required>
+            <span class="text-light">C) Aceptar todo y absorber la diferencia</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 2</h5>
+          <p>Dos gerentes del cliente piden cosas contradictorias para la misma función. ¿Qué hacés?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p2" value="A" required>
+            <span class="text-light">A) Convocar una reunión con los dos y con quien tiene la decisión final</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p2" value="B" required>
+            <span class="text-light">B) Hacer lo que pide el gerente que firmó el contrato</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p2" value="C" required>
+            <span class="text-light">C) Desarrollar las dos variantes</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 3</h5>
+          <p>El analista senior renuncia cuando falta poco para terminar el análisis. El analista junior participó en todas las entrevistas. ¿Qué decidís?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p3" value="A" required>
+            <span class="text-light">A) Contratar otro senior</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p3" value="B" required>
+            <span class="text-light">B) Dejar al junior a cargo, con unas horas de un senior externo que lo supervise</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p3" value="C" required>
+            <span class="text-light">C) Repartir lo que falta entre los programadores</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-info text-light mb-3">
+        <div class="card-body">
+          <h5 class="text-info">Pregunta 4</h5>
+          <p>El cliente no termina de aprobar la especificación y el equipo de diseño está parado. ¿Qué hacés?</p>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p4" value="A" required>
+            <span class="text-light">A) Avanzar con el diseño completo sin la aprobación</span>
+          </label>
+          <label class="form-check mb-2">
+            <input class="form-check-input me-2" type="radio" name="p4" value="B" required>
+            <span class="text-light">B) Frenar todo hasta que firme</span>
+          </label>
+          <label class="form-check">
+            <input class="form-check-input me-2" type="radio" name="p4" value="C" required>
+            <span class="text-light">C) Hacer una reunión de revisión guiada, aprobar por partes y avanzar solo con lo aprobado</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card bg-black border-success text-light mt-4">
+        <div class="card-body">
+          <h3 class="text-success">📊 Resultado de la etapa</h3>
+          <div id="feedback" class="alert d-none mt-3"></div>
+          <p class="mb-1">Puntaje: <strong id="score">0</strong> / 4</p>
+          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS</button>
+          <div class="d-flex justify-content-between flex-wrap gap-2 mt-4">
+            <button type="button" id="etapa1.html" class="btn btn-outline-light">⬅️ ETAPA ANTERIOR</button>
+            <button type="button" id="btnSiguiente" class="btn btn-primary" disabled>➡️ SIGUIENTE ETAPA</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </main>
+  <script src="etapa3.js"></script>
 </body>
 </html>

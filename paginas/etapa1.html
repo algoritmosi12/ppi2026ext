@@ -3,207 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevQuest - Etapa 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>DevQuest - Etapa 1</title>
 </head>
 <body class="bg-success text-light">
 
     <header class="container-fluid bg-black py-3 mb-4">
-        <div class="container">
-            <h1 class="text-white text-center mb-2">🚀 DEVQUEST</h1>
-            <div class="text-end">
-                <span class="badge bg-info fs-6">ETAPA 1</span>
-            </div>
-            <p class="text-info text-center mb-0 mt-1">Proyecto de Gestión de Software</p>
+        <div class="container text-center">
+            <h1 class="text-light">🚀 DEVQUEST</h1> 
+            <h2>Etapa 1: Relevamiento</h2>
             <div class="text-end mt-2">
-                <span class="btn btn-info text-white fw-bold">USUARIO: <strong id="nombreUsuario"></strong></span>
+                <span class="btn btn-primary text-white fw-bold">USUARIO: <strong id="user"></strong></span>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <form id="formEquipo">
-
-        <div class="card bg-black border-warning text-center text-warning mb-4">
-            <div class="card-body">
-                <h3> TIEMPO RESTANTE</h3>
-                <div id="reloj" class="display-4 fw-bold">20:00</div>
-            </div>
-        </div>
-
+    <div class="container pb-5" style="max-width: 850px;">
+        
         <div class="row g-3 mb-4">
-            <div class="col-12 col-md-4">
-                <div class="card bg-black text-info border-info h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-light">PRESUPUESTO</h6>
-                        <h3 id="presupuesto" class="text-info">$20.000</h3>
-                    </div>
+            <div class="col-6">
+                <div class="card bg-black border-info text-center p-3">
+                    <h6 class="text-secondary mb-1">PRESUPUESTO</h6>
+                    <h3 id="presupuesto" class="text-info">$20.000</h3>
                 </div>
             </div>
-
-            <div class="col-12 col-md-4">
-                <div class="card bg-black text-light border-info h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-white">TIEMPO ETAPA</h6>
-                        <h3 id="tiempoetapa" class="text-info">03:00</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="card bg-black text-light border-info h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-light">ROL</h6>
-                        <h3 class="text-info">Project Manager</h3>
-                    </div>
+            <div class="col-6">
+                <div class="card bg-black border-info text-center p-3">
+                    <h6 class="text-secondary mb-1">TIEMPO</h6>
+                    <h3 id="tiempo" class="text-info">20 min</h3>
                 </div>
             </div>
         </div>
 
         <div class="card bg-black border-info text-light mb-4">
             <div class="card-body">
-                <h2 class="text-success">📋 Etapa 1 — Relevamiento</h2>
-                <p class="text-secondary">
-                    Sos el <strong class="text-info">Project Manager</strong> encargado de iniciar un nuevo proyecto de software.
-                </p>
+                <h3 class="text-info">📋 Situación inicial</h3>
                 <p class="text-light">
-                    Antes de comenzar el desarrollo, debés formar el equipo que participará en el relevamiento.
+                    Como Project Manager, debes organizar el levantamiento de requerimientos con el cliente tomando decisiones estratégicas.
                 </p>
-                <div class="alert alert-info">
-                    💡 <strong>Tu objetivo:</strong> seleccioná los empleados que consideres necesarios para realizar esta etapa.
-                </div>
             </div>
         </div>
 
-        <h3 class="mb-3">👥 Empleados disponibles</h3>
-
-        <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card bg-black text-info border-info h-100 empleado">
+        <form id="formEtapa1">
+            <!-- Pregunta 1 -->
+            <div class="card bg-black border-info text-light mb-4">
+                <div class="card-body">
+                    <h5 class="text-info mb-3">Pregunta 1</h5>
+                    <p>El cliente tiene tres sucursales y cada una trabaja de forma distinta. El sistema lo van a usar las tres. ¿Cómo organizás el relevamiento?</p>
                     
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <div>
-                            <h4>👤 ANALISTA JUNIOR</h4>
-                            <span class="badge bg-success mb-3">ANÁLISIS</span>
-                            <p class="text-success">Realiza el relevamiento de necesidades y requisitos del proyecto.</p>
-                            <hr>
-                            <p class="mb-1">💰 Costo: <strong>$1.000</strong></p>
-                            <p>⏱️ Tiempo: <strong>3 min</strong></p>
-                        </div>
-                        <label class="form-label mt-3" for="cantidadJunior">Cantidad</label>
-                        <select id="cantidadJunior" class="form-select cantidad-empleado" data-costo="1000" data-segundos="180" aria-label="Cantidad de analistas junior">
-                            <option value="0" selected>Elegir cantidad</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="p1" id="p1a" value="A" required>
+                        <label class="form-check-label text-light" for="p1a">
+                            A) Mandar al analista a relevar las tres sucursales
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="p1" id="p1b" value="B">
+                        <label class="form-check-label text-light" for="p1b">
+                            B) Relevar solo la casa central y suponer que las otras trabajan igual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p1" id="p1c" value="C">
+                        <label class="form-check-label text-light" for="p1c">
+                            C) Relevar la casa central y mandar un cuestionario a las otras dos
+                        </label>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card bg-black text-info border-info h-100 empleado">
-                   
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <div>
-                            <h4>👤 ANALISTA SEMI SENIOR</h4>
-                            <span class="badge bg-success mb-3">ANÁLISIS</span>
-                            <p class="text-success">Analiza los requisitos y propone soluciones para el sistema.</p>
-                            <hr>
-                            <p class="mb-1">💰 Costo: <strong>$800</strong></p>
-                            <p>⏱️ Tiempo: <strong>2 min</strong></p>
-                        </div>
-                        <label class="form-label mt-3" for="cantidadSemiSenior">Cantidad</label>
-                        <select id="cantidadSemiSenior" class="form-select cantidad-empleado" data-costo="800" data-segundos="120" aria-label="Cantidad de analistas semi senior">
-                            <option value="0" selected>Elegir cantidad</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card bg-black text-info border-info h-100 empleado">
+            <!-- Pregunta 2 -->
+            <div class="card bg-black border-info text-light mb-4">
+                <div class="card-body">
+                    <h5 class="text-info mb-3">Pregunta 2</h5>
+                    <p>Los empleados clave del cliente dicen que no tienen tiempo para las entrevistas. El presupuesto está justo. ¿Qué hacés?</p>
                     
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <div>
-                            <h4>👤 ANALISTA SENIOR</h4>
-                            <span class="badge bg-success text-light mb-3">ANÁLISIS</span>
-                            <p class="text-success">Define soluciones y supervisa el análisis del sistema.</p>
-                            <hr>
-                            <p class="mb-1">💰 Costo: <strong>$1.200</strong></p>
-                            <p>⏱️ Tiempo: <strong>3 min</strong></p>
-                        </div>
-                        <label class="form-label mt-3" for="cantidadSenior">Cantidad</label>
-                        <select id="cantidadSenior" class="form-select cantidad-empleado" data-costo="1200" data-segundos="180" aria-label="Cantidad de analistas senior">
-                            <option value="0" selected>Elegir cantidad</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="p2" id="p2a" value="A" required>
+                        <label class="form-check-label text-light" for="p2a">
+                            A) Pedirle al gerente del cliente que les libere horas dentro del horario laboral
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="p2" id="p2b" value="B">
+                        <label class="form-check-label text-light" for="p2b">
+                            B) Pagarles horas extra para entrevistarlos fuera de horario
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p2" id="p2c" value="C">
+                        <label class="form-check-label text-light" for="p2c">
+                            C) Relevar solo con documentos y formularios, sin entrevistas
+                        </label>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card bg-black text-info border-info h-100 empleado">
-                     
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <div>
-                            <h4>💻 PROGRAMADOR</h4>
-                            <span class="badge bg-success mb-3">PRUEBAS</span>
-                            <p class="text-success">Aporta información sobre posibles pruebas y errores del sistema.</p>
-                            <hr>
-                            <p class="mb-1">💰 Costo: <strong>$700</strong></p>
-                            <p>⏱️ Tiempo: <strong>2 min</strong></p>
-                        </div>
-                        <label class="form-label mt-3" for="cantidadProgramador">Cantidad</label>
-                        <select id="cantidadProgramador" class="form-select cantidad-empleado" data-costo="700" data-segundos="120" aria-label="Cantidad de programadores">
-                            <option value="0" selected>Elegir cantidad</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+            <!-- Pregunta 3 -->
+            <div class="card bg-black border-info text-light mb-4">
+                <div class="card-body">
+                    <h5 class="text-info mb-3">Pregunta 3</h5>
+                    <p>Tu analista nunca trabajó en el rubro del cliente y el relevamiento empieza ya. ¿Qué decidís?</p>
+                    
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="p3" id="p3a" value="A" required>
+                        <label class="form-check-label text-light" for="p3a">
+                            A) Mandarlo a un curso sobre el rubro
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="p3" id="p3b" value="B">
+                        <label class="form-check-label text-light" for="p3b">
+                            B) Contratar por unos días a un consultor del rubro que lo acompañe en las entrevistas
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p3" id="p3c" value="C">
+                        <label class="form-check-label text-light" for="p3c">
+                            C) Que aprenda sobre la marcha
+                        </label>
                     </div>
                 </div>
             </div>
-        </div>
 
-        </form>
-
-        <div class="text-center mt-4 mb-5">
-            <button type="button" id="btnConfirmar" class="btn btn-success btn-lg w-100">
-                ✅ CONFIRMAR EQUIPO
-            </button>
-
-            <div id="mensaje" class="alert mt-4 d-none" role="status" aria-live="polite"></div>
-
-            <div id="siguiente" class="text-center mt-4 d-none">
-                <div class="alert alert-success">
-                    <h3>🎉 ¡Relevamiento completado!</h3>
-                    <p>El equipo fue seleccionado correctamente.</p>
-                    <p>Próxima etapa: <strong>Análisis del Sistema</strong></p>
+            <!-- Pregunta 4 -->
+            <div class="card bg-black border-info text-light mb-4">
+                <div class="card-body">
+                    <h5 class="text-info mb-3">Pregunta 4</h5>
+                    <p>El cliente quiere saltear el relevamiento y empezar a programar ya para ahorrar. ¿Qué hacés?</p>
+                    
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="p4" id="p4a" value="A" required>
+                        <label class="form-check-label text-light" for="p4a">
+                            A) Aceptar y empezar a programar
+                        </label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="p4" id="p4b" value="B">
+                        <label class="form-check-label text-light" for="p4b">
+                            B) Explicarle el riesgo y proponerle un relevamiento acotado a los procesos críticos
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="p4" id="p4c" value="C">
+                        <label class="form-check-label text-light" for="p4c">
+                            C) Exigir el relevamiento completo aunque el cliente se enoje
+                        </label>
+                    </div>
                 </div>
-                <button id="btnContinuar" class="btn btn-primary btn-lg">
-                    ➡️ CONTINUAR
+            </div>
+
+            <!-- Botón de Confirmación -->
+            <div class="text-center">
+                <button type="submit" id="btnConfirmar" class="btn btn-info btn-lg w-100 fw-bold">
+                    CONFIRMAR RESPUESTAS Y CONTINUAR
                 </button>
             </div>
-        </div>
+        </form>
+
     </div>
 
-    <!-- Scripts del proyecto -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/clock.js"></script>
-    <script src="../js/etapa1.js"></script>
 </body>
 </html>
