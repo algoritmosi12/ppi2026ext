@@ -26,7 +26,7 @@
     <div class="card bg-black border-warning text-center text-warning mb-4">
       <div class="card-body">
         <h3>⏱️ TIEMPO RESTANTE</h3>
-        <div id="reloj" class="display-4 fw-bold">03:00</div>
+        <div id="reloj" class="display-4 fw-bold">18:00</div>
       </div>
     </div>
 
@@ -82,11 +82,11 @@
           <p>Los 40 empleados del cliente tienen que aprender a usar el sistema y el presupuesto está justo. ¿Qué decidís?</p>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p2" value="A" required>
-            <span class="text-light">A) Capacitación presencial para todos</span>
+            <span class="text-light">A) Capacitar a un referente por sector para que le enseñe al resto</span>
           </label>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p2" value="B" required>
-            <span class="text-light">B) Capacitar a un referente por sector para que le enseñe al resto</span>
+            <span class="text-light">B) Capacitación presencial para todos</span>
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p2" value="C" required>
@@ -101,15 +101,15 @@
           <p>Los servidores del cliente no alcanzan para el sistema nuevo y la fecha de puesta en marcha es fija. ¿Qué hacés?</p>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p3" value="A" required>
-            <span class="text-light">A) Esperar a que el cliente compre servidores nuevos</span>
+            <span class="text-light">A) Alquilar servidores en la nube, a cargo del cliente</span>
           </label>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p3" value="B" required>
-            <span class="text-light">B) Alquilar servidores en la nube, a cargo del cliente</span>
+            <span class="text-light">B) Poner a los programadores a optimizar el sistema para los servidores viejos</span>
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p3" value="C" required>
-            <span class="text-light">C) Poner a los programadores a optimizar el sistema para los servidores viejos</span>
+            <span class="text-light">C) Pedirle al cliente que compre servidores nuevos antes de la fecha</span>
           </label>
         </div>
       </div>
@@ -128,7 +128,7 @@
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p4" value="C" required>
-            <span class="text-light">C) Migrar solo el último año</span>
+            <span class="text-light">C) Migrar lo reciente y dejar el historial viejo en el sistema anterior</span>
           </label>
         </div>
       </div>
@@ -138,15 +138,10 @@
           <h3 class="text-success">📊 Resultado de la etapa</h3>
           <div id="feedback" class="alert d-none mt-3"></div>
           <p class="mb-1">Puntaje: <strong id="score">0</strong> / 4</p>
-          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS</button>
-          <div class="d-flex justify-content-between flex-wrap gap-2 mt-4">
-            <button type="button" id="etapa4.html" class="btn btn-outline-light">⬅️ ETAPA ANTERIOR</button>
-            <button type="button" id="btnSiguiente" class="btn btn-primary" disabled>➡️ SIGUIENTE ETAPA</button>
+          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS Y AVANZAR</button>
           </div>
-        </div>
       </div>
     </form>
   </main>
-  <script src="etapa6.js"></script>
 </body>
 </html>

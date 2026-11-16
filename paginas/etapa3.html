@@ -26,7 +26,7 @@
     <div class="card bg-black border-warning text-center text-warning mb-4">
       <div class="card-body">
         <h3>⏱️ TIEMPO RESTANTE</h3>
-        <div id="reloj" class="display-4 fw-bold">03:00</div>
+        <div id="reloj" class="display-4 fw-bold">18:00</div>
       </div>
     </div>
 
@@ -60,18 +60,18 @@
       <div class="card bg-black border-info text-light mb-3">
         <div class="card-body">
           <h5 class="text-info">Pregunta 1</h5>
-          <p>El desarrollo viene atrasado. ¿Qué decidís?</p>
+          <p>El desarrollo viene atrasado y el cliente exige la fecha pactada. ¿Qué decidís?</p>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p1" value="A" required>
-            <span class="text-light">A) Sumar dos programadores</span>
+            <span class="text-light">A) Sumar dos programadores al equipo</span>
           </label>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p1" value="B" required>
-            <span class="text-light">B) Pedir horas extra al equipo</span>
+            <span class="text-light">B) Renegociar con el cliente: lo esencial en la fecha pactada y el resto en una segunda entrega</span>
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p1" value="C" required>
-            <span class="text-light">C) Renegociar con el cliente: lo esencial en la fecha pactada y el resto en una segunda entrega</span>
+            <span class="text-light">C) Pedir horas extra al equipo</span>
           </label>
         </div>
       </div>
@@ -105,11 +105,11 @@
           </label>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p3" value="B" required>
-            <span class="text-light">B) Presupuestarla como un cambio, con su costo y su plazo, y que el cliente decida</span>
+            <span class="text-light">B) Rechazarla porque el alcance ya está cerrado</span>
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p3" value="C" required>
-            <span class="text-light">C) Rechazarla porque el alcance ya está cerrado</span>
+            <span class="text-light">C) Presupuestarla como un cambio, con su costo y su plazo, y que el cliente decida</span>
           </label>
         </div>
       </div>
@@ -117,18 +117,18 @@
       <div class="card bg-black border-info text-light mb-3">
         <div class="card-body">
           <h5 class="text-info">Pregunta 4</h5>
-          <p>Un programador se enferma y sus tareas son las que definen la fecha de entrega. ¿Qué decidís?</p>
+          <p>Un programador se enferma, no se sabe cuándo vuelve y sus tareas son las que definen la fecha de entrega. ¿Qué decidís?</p>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p4" value="A" required>
-            <span class="text-light">A) Contratar un programador temporal para cubrirlo</span>
+            <span class="text-light">A) Esperar a que vuelva</span>
           </label>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p4" value="B" required>
-            <span class="text-light">B) Repartir sus tareas entre el equipo y postergar otras</span>
+            <span class="text-light">B) Contratar un programador temporal para cubrirlo</span>
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p4" value="C" required>
-            <span class="text-light">C) Esperar a que vuelva</span>
+            <span class="text-light">C) Repartir sus tareas entre el equipo y postergar otras</span>
           </label>
         </div>
       </div>
@@ -138,15 +138,10 @@
           <h3 class="text-success">📊 Resultado de la etapa</h3>
           <div id="feedback" class="alert d-none mt-3"></div>
           <p class="mb-1">Puntaje: <strong id="score">0</strong> / 4</p>
-          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS</button>
-          <div class="d-flex justify-content-between flex-wrap gap-2 mt-4">
-            <button type="button" id="etapa2.html'" class="btn btn-outline-light">⬅️ ETAPA ANTERIOR</button>
-            <button type="button" id="btnSiguiente" class="btn btn-primary" disabled>➡️ SIGUIENTE ETAPA</button>
-          </div>
+          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS Y AVANZAR</button>
         </div>
       </div>
     </form>
   </main>
-  <script src="etapa4.js"></script>
 </body>
 </html>

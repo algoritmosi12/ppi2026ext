@@ -1,17 +1,14 @@
-const btnConfirmar = document.getElementById("btnConfirmar");
-const siguiente = document.getElementById("siguiente");
-const btnContinuar = document.getElementById("btnContinuar");
 const partida = JSON.parse(sessionStorage.getItem("partida") || "null");
 
 if (partida && typeof partida.username === "string") {
-    document.getElementById("nombreUsuario").textContent = partida.username;
+    const usuario = document.getElementById("user");
+    if (usuario) {
+        usuario.textContent = partida.username;
+    }
 }
 
-btnConfirmar.addEventListener("click", () => {
-    siguiente.classList.remove("d-none");
-});
-
-btnContinuar.addEventListener("click", () => {
+document.getElementById("formEtapa1").addEventListener("submit", (event) => {
+    event.preventDefault();
     window.location.href = "etapa2.html";
 });
     

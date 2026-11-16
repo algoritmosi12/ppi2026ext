@@ -26,7 +26,7 @@
     <div class="card bg-black border-warning text-center text-warning mb-4">
       <div class="card-body">
         <h3>⏱️ TIEMPO RESTANTE</h3>
-        <div id="reloj" class="display-4 fw-bold">03:00</div>
+        <div id="reloj" class="display-4 fw-bold">18:00</div>
       </div>
     </div>
 
@@ -60,18 +60,18 @@
       <div class="card bg-black border-info text-light mb-3">
         <div class="card-body">
           <h5 class="text-info">Pregunta 1</h5>
-          <p>Queda la mitad del tiempo que necesitan las pruebas. El contrato tiene una multa de $2.000 por entregar tarde. ¿Qué decidís?</p>
+          <p>Solo queda la mitad del tiempo que necesitan las pruebas. El contrato tiene una multa de $2.000 por entregar tarde. ¿Qué decidís?</p>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p1" value="A" required>
-            <span class="text-light">A) Entregar en fecha con la mitad de las pruebas</span>
+            <span class="text-light">A) Contratar testers externos para probar todo a tiempo</span>
           </label>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p1" value="B" required>
-            <span class="text-light">B) Atrasar la entrega</span>
+            <span class="text-light">B) Entregar en fecha con la mitad de las pruebas</span>
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p1" value="C" required>
-            <span class="text-light">C) Contratar testers externos para probar todo a tiempo</span>
+            <span class="text-light">C) Atrasar la entrega y pagar la multa</span>
           </label>
         </div>
       </div>
@@ -86,11 +86,11 @@
           </label>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p2" value="B" required>
-            <span class="text-light">B) Avisarle al cliente y postergar la entrega hasta corregirlo</span>
+            <span class="text-light">B) Entregar en fecha con la facturación deshabilitada</span>
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p2" value="C" required>
-            <span class="text-light">C) Entregar en fecha con la facturación deshabilitada</span>
+            <span class="text-light">C) Avisarle al cliente y postergar la entrega hasta corregirlo</span>
           </label>
         </div>
       </div>
@@ -117,18 +117,18 @@
       <div class="card bg-black border-info text-light mb-3">
         <div class="card-body">
           <h5 class="text-info">Pregunta 4</h5>
-          <p>Las pruebas encontraron 30 errores menores y no hay tiempo para corregir todos. ¿Qué decidís?</p>
+          <p>Las pruebas encontraron 30 errores, la mayoría menores, y no hay tiempo para corregirlos todos. ¿Qué decidís?</p>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p4" value="A" required>
-            <span class="text-light">A) Corregir todos antes de entregar</span>
+            <span class="text-light">A) Corregir todos antes de entregar, aunque se atrase</span>
           </label>
           <label class="form-check mb-2">
             <input class="form-check-input me-2" type="radio" name="p4" value="B" required>
-            <span class="text-light">B) Clasificarlos por gravedad, corregir los importantes y acordar con el cliente el resto para la primera actualización</span>
+            <span class="text-light">B) Entregar así y corregir lo que el cliente reclame</span>
           </label>
           <label class="form-check">
             <input class="form-check-input me-2" type="radio" name="p4" value="C" required>
-            <span class="text-light">C) Entregar así y corregir lo que el cliente reclame</span>
+            <span class="text-light">C) Clasificarlos por gravedad, corregir los importantes y acordar con el cliente el resto para la primera actualización</span>
           </label>
         </div>
       </div>
@@ -138,15 +138,10 @@
           <h3 class="text-success">📊 Resultado de la etapa</h3>
           <div id="feedback" class="alert d-none mt-3"></div>
           <p class="mb-1">Puntaje: <strong id="score">0</strong> / 4</p>
-          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS</button>
-          <div class="d-flex justify-content-between flex-wrap gap-2 mt-4">
-            <button type="button" id="etapa3.html'" class="btn btn-outline-light">⬅️ ETAPA ANTERIOR</button>
-            <button type="button" id="btnSiguiente" class="btn btn-primary" disabled>➡️ SIGUIENTE ETAPA</button>
-          </div>
+          <button type="submit" id="btnConfirmar" class="btn btn-success btn-lg w-100 mt-3">✅ CONFIRMAR RESPUESTAS Y AVANZAR</button>
         </div>
       </div>
     </form>
   </main>
-  <script src="etapa5.js"></script>
 </body>
 </html>
